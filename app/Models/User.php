@@ -17,7 +17,6 @@ class User extends Model implements AuthenticatableContract // Implementasikan A
 
     protected $fillable = [
         'name',
-        'nim',
         'email',
         'password',
         'role',

@@ -22,7 +22,6 @@ class UserController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'nim' => 'required',
             'email' => 'required',
             'role' => 'required',
             'password' => 'required',
@@ -30,7 +29,6 @@ class UserController extends Controller
 
         $store = new User();
         $store->name = $request->nama;
-        $store->nim = $request->nim;
         $store->email = $request->email;
         $store->role = $request->role;
         $store->no_hp = $request->no_hp;

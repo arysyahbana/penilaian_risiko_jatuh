@@ -98,9 +98,9 @@
                                                                 <option value="Admin"
                                                                     {{ $item->role == 'Admin' ? 'selected' : '' }}>Admin
                                                                 </option>
-                                                                <option value="Mahasiswa"
-                                                                    {{ $item->role == 'Mahasiswa' ? 'selected' : '' }}>
-                                                                    Mahasiswa</option>
+                                                                <option value="User"
+                                                                    {{ $item->role == 'User' ? 'selected' : '' }}>
+                                                                    User</option>
                                                             </select>
                                                             <x-admin.input type="password" placeholder="********"
                                                                 label="Password" name="password" />
@@ -178,7 +178,7 @@
                         <select class="form-select mb-3" aria-label="Default select example" name="role">
                             <option hidden>--- Pilih Role ---</option>
                             <option value="Admin">Admin</option>
-                            <option value="Mahasiswa">Mahasiswa</option>
+                            <option value="User">User</option>
                         </select>
                         <x-admin.input type="password" placeholder="********" label="Password" name="password" />
                     </div>
