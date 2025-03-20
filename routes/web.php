@@ -33,7 +33,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PenilaianController::class, 'index'])->name('index');
 Route::get('/penilaian/search', [PenilaianController::class, 'search'])->name('penilaian.search');
 
-// Admin
 Route::middleware('auth')->group(function () {
     Route::prefix('penilaian')->group(function () {
         Route::get('/show', [AdminPenilaianController::class, 'index'])->name('penilaian.show');
@@ -43,8 +42,12 @@ Route::middleware('auth')->group(function () {
         Route::post('/update/{no_mr}', [AdminPenilaianController::class, 'update'])->name('penilaian.update');
         Route::get('/destroy/{no_mr}', [AdminPenilaianController::class, 'destroy'])->name('penilaian.destroy');
     });
+
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::post('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
 });
 
+// Admin
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::prefix('users')->group(function () {
         Route::get('/show', [UserController::class, 'index'])->name('users.show');
@@ -54,11 +57,6 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
         Route::get('/download', [UserController::class, 'download'])->name('users.download');
         Route::get('/acc-user/{id}/{action}', [UserController::class, 'accUser'])->name('users.accUser');
     });
-});
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::post('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 require __DIR__ . '/auth.php';

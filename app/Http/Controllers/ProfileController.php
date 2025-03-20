@@ -21,12 +21,9 @@ class ProfileController extends Controller
         $page = 'Profile';
         $user = Auth::user();
 
-        if ($user->role == 'Admin') {
+        if ($user) {
             return view('admin.pages.profile.index', compact('user', 'page'));
-        } elseif ($user->role == 'Mahasiswa') {
-            return view('user.pages.profile.index', compact('user', 'page'));
         }
-
         abort(403, 'Unauthorized access');
     }
 
