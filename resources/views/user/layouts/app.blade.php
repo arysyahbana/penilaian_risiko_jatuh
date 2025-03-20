@@ -22,7 +22,7 @@
 
         {{-- Banner --}}
         <section class="relative overflow-hidden min-h-[650px] bg-gradient-to-b from-sky-800 to-sky-500 shadow">
-            <img src="{{ asset('dist/assets/img/pattern.jpg') }}" alt=""
+            <img src="/dist/assets/img/pattern.jpg" alt=""
                 class="absolute inset-0 w-full h-full lg:h-screen object-cover mix-blend-overlay">
         </section>
 
