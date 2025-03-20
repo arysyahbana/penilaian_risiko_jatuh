@@ -62,8 +62,8 @@
                         </div>
 
                         {{-- pagination --}}
-                        <div class="flex justify-end w-full z-50 mt-5">
-                            {{ $data->links() }}
+                        <div class="flex justify-end w-full z-50 mt-12">
+                            {{ $data->links('pagination::custom') }}
                         </div>
                         {{-- end pagination --}}
                     </div>

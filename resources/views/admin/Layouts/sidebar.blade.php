@@ -11,8 +11,7 @@
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
-            @if (Auth::guard()->user()->role == 'Admin')
-                {{-- Penilaian --}}
+            {{-- Penilaian --}}
                 <li class="nav-item">
                     <a class="nav-link {{ $page == 'penilaian' ? 'active' : '' }}"
                         href="{{ route('penilaian.show') }}">
@@ -42,6 +41,7 @@
                     </a>
                 </li>
 
+            @if (Auth::guard()->user()->role == 'Admin')
                 {{-- Users --}}
                 <li class="nav-item">
                     <a class="nav-link {{ $page == 'Users' ? 'active' : '' }}" href="{{ route('users.show') }}">
