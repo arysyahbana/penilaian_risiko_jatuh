@@ -5,7 +5,7 @@
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="{{ route('index') }}">
             <img src={{ asset('dist/assets/img/logo.png') }} class="navbar-brand-img h-100" alt="main_logo">
-            <span class="ms-1 font-weight-bold">Ebook</span>
+            <span class="ms-1 font-weight-bold">Penilaian</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -43,7 +43,7 @@
                 </li>
 
                 {{-- Users --}}
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ $page == 'Users' ? 'active' : '' }}" href="{{ route('users.show') }}">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -72,7 +72,7 @@
                         </div>
                         <span class="nav-link-text mx-1">Users</span>
                     </a>
-                </li> --}}
+                </li>
             @endif
 
         </ul>

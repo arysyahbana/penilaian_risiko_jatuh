@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PenilaianController::class, 'index'])->name('index');
 
 // Admin
-Route::middleware(['auth', 'role:Admin'])->group(function () {
+Route::middleware('auth')->group(function () {
     Route::prefix('penilaian')->group(function () {
         Route::get('/show', [AdminPenilaianController::class, 'index'])->name('penilaian.show');
         Route::get('/create', [AdminPenilaianController::class, 'create'])->name('penilaian.create');
@@ -41,6 +41,17 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
         Route::get('/edit', [AdminPenilaianController::class, 'edit'])->name('penilaian.edit');
         Route::post('/update/{id}', [AdminPenilaianController::class, 'update'])->name('penilaian.update');
         Route::get('/destroy/{id}', [AdminPenilaianController::class, 'destroy'])->name('penilaian.destroy');
+    });
+});
+
+Route::middleware(['auth', 'role:Admin'])->group(function () {
+    Route::prefix('users')->group(function () {
+        Route::get('/show', [UserController::class, 'index'])->name('users.show');
+        Route::post('/store', [UserController::class, 'store'])->name('users.store');
+        Route::post('/update/{id}', [UserController::class, 'update'])->name('users.update');
+        Route::get('/destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+        Route::get('/download', [UserController::class, 'download'])->name('users.download');
+        Route::get('/acc-user/{id}/{action}', [UserController::class, 'accUser'])->name('users.accUser');
     });
 });
 

@@ -69,9 +69,6 @@
                                                             <x-admin.input type="text" placeholder="Nama"
                                                                 label="Nama" name="nama"
                                                                 value="{{ $item->name ?? '' }}" />
-                                                            <x-admin.input type="text" placeholder="Nim"
-                                                                label="Nim" name="nim"
-                                                                value="{{ $item->nim ?? '' }}" />
                                                             <x-admin.input type="number" placeholder="Nomor HP"
                                                                 label="Nomor HP" name="no_hp"
                                                                 value="{{ $item->no_hp ?? '' }}" />
@@ -168,7 +165,6 @@
                     @csrf
                     <div class="modal-body">
                         <x-admin.input type="text" placeholder="Nama" label="Nama" name="nama" />
-                        <x-admin.input type="text" placeholder="Nim" label="Nim" name="nim" />
                         <x-admin.input type="number" placeholder="Nomor HP" label="Nomor HP" name="no_hp" />
                         <x-admin.input type="text" placeholder="Alamat" label="Alamat" name="alamat" />
                         <x-admin.input type="email" placeholder="Email" label="Email" name="email" />

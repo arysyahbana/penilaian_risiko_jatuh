@@ -10,14 +10,6 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
-        <!-- Nim -->
-        <div>
-            <x-input-label for="nim" :value="__('Nim')" />
-            <x-text-input id="nim" class="block mt-1 w-full" type="text" name="nim" :value="old('nim')" required
-                autofocus autocomplete="nim" />
-            <x-input-error :messages="$errors->get('nim')" class="mt-2" />
-        </div>
-
         <!-- Jenis Kelamin -->
         <div class="my-4">
             <x-input-label for="jk" :value="__('Jenis Kelamin')" />
@@ -77,7 +69,7 @@
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 href="{{ route('login') }}">
-                {{ __('Sudah punya akun mahasiswa?') }}
+                {{ __('Sudah punya akun?') }}
             </a>
 
             <x-primary-button class="ms-4">

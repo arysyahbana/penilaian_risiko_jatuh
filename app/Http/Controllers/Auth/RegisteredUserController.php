@@ -32,7 +32,6 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'nim' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'gender' => ['required'],
@@ -42,10 +41,9 @@ class RegisteredUserController extends Controller
 
         $user = User::create([
             'name' => $request->name,
-            'nim' => $request->nim,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => 'Mahasiswa',
+            'role' => 'User',
             'jenis_kelamin' => $request->gender,
             'no_hp' => $request->noHp,
             'alamat' => $request->alamat,
@@ -56,8 +54,8 @@ class RegisteredUserController extends Controller
 
         // return redirect(RouteServiceProvider::HOME);
         if (Auth::user()->role == 'Admin') {
-            return redirect()->intended('/dashboard')->with('success', 'Selamat datang ' . Auth::user()->name);
-        } elseif (Auth::user()->role == 'Mahasiswa') {
+            return redirect()->intended('/penilaian/show')->with('success', 'Selamat datang ' . Auth::user()->name);
+        } elseif (Auth::user()->role == 'User') {
             return redirect()->intended('/')->with('success', 'Selamat datang ' . Auth::user()->name);
         } else {
             return redirect()->route('login')->with('error', 'Akun anda tidak memiliki akses');
