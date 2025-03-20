@@ -44,13 +44,13 @@
                                                 <span class="text-capitalize ms-1">Edit</span>
                                             </a>
                                             <a href="#" class="btn bg-gradient-danger" data-bs-toggle="modal"
-                                                data-bs-target="#hapusMateri"><i class="fa fa-trash"
+                                                data-bs-target="#hapusMateri{{ $item->no_mr }}"><i class="fa fa-trash"
                                                     aria-hidden="true"></i><span
                                                     class="text-capitalize ms-1">Hapus</span></a>
                                         </x-admin.td>
 
                                         <!-- Modal Hapus -->
-                                        <div class="modal fade" id="hapusMateri" data-bs-backdrop="static"
+                                        <div class="modal fade" id="hapusMateri{{ $item->no_mr }}" data-bs-backdrop="static"
                                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="hapusMateriLabel"
                                             aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-scrollable">
