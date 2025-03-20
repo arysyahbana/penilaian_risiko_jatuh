@@ -8,7 +8,7 @@
     "routes": [
         {
             "src": "/dist/assets/img/(.*)",
-            "dest": "/public/dist/assets/img/$1"
+            "dest": "/dist/assets/img/$1"
         },
         {
             "src": "/dist/assets/css/(.*)",
