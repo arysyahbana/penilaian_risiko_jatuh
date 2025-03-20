@@ -16,7 +16,7 @@
 
                                 <x-admin.input type="text" placeholder="Ruangan" label="Ruangan" name="ruangan" />
 
-                                <x-admin.input type="number" placeholder="Bed" label="Bed" name="bed" />
+                                <x-admin.input type="text" placeholder="Bed" label="Bed" name="bed" />
 
                                 <x-admin.input type="text" placeholder="Nama" label="Nama" name="nama" />
 
