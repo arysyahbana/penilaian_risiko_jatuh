@@ -7,24 +7,24 @@
     },
     "routes": [
         {
-            "src": "/assets/img/(.*)",
-            "dest": "/public/build/assets/img/$1"
+            "src": "/dist/assets/img(.*)",
+            "dest": "/public/dist/assets/img/$1"
         },
         {
-            "src": "/assets/css/(.*)",
-            "dest": "/public/build/assets/css/$1"
+            "src": "/dist/assets/css(.*)",
+            "dest": "/public/dist/assets/css/$1"
         },
         {
-            "src": "/assets/fonts/(.*)",
-            "dest": "/public/build/assets/fonts/$1"
+            "src": "/dist/assets/fonts(.*)",
+            "dest": "/public/dist/assets/fonts/$1"
         },
         {
-            "src": "/assets/js/(.*)",
-            "dest": "/public/build/assets/js/$1"
+            "src": "/dist/assets/js(.*)",
+            "dest": "/public/dist/assets/js/$1"
         },
         {
-            "src": "/assets/scss/(.*)",
-            "dest": "/public/build/assets/scss/$1"
+            "src": "/dist/assets/scss(.*)",
+            "dest": "/public/dist/assets/scss/$1"
         },
         {
             "src": "/build/assets/(.*)",
