@@ -27,14 +27,22 @@
             "dest": "/public/dist/assets/scss/"
         },
         {
+            "src": "/resources/css(.*)",
+            "dest": "/resources/css/"
+        },
+        {
+            "src": "/resources/js(.*)",
+            "dest": "/resources/js/"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://syafar-travel-umroh.vercel.app/",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://penilaian-risiko-jatuh-three.vercel.app/",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
