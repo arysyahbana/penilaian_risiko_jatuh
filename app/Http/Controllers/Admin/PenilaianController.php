@@ -16,12 +16,14 @@ class PenilaianController extends Controller
             'bed' => 'required',
             'nama' => 'required',
             'risiko_jatuh' => 'required',
+            'tanggal' => 'required',
         ], [
             'no_mr.required' => 'Nama pasien wajib diisi.',
             'ruangan.required' => 'Ruangan pasien wajib diisi.',
             'bed.required' => 'Bed pasien wajib diisi.',
             'nama.required' => 'Nama pasien wajib diisi.',
             'risiko_jatuh.required' => 'Tingkat resiko jatuh pasien wajib diisi.',
+            'tanggal'=> 'Tanggal wajib diisi.',
         ]);
     }
     public function index()

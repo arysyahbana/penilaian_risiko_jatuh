@@ -24,7 +24,8 @@ class PenilaianController extends Controller
                     ->orWhere('ruangan', 'LIKE', "%$search%")
                     ->orWhere('bed', 'LIKE', "%$search%")
                     ->orWhere('nama', 'LIKE', "%$search%")
-                    ->orWhere('risiko_jatuh', 'LIKE', "%$search%");
+                    ->orWhere('risiko_jatuh', 'LIKE', "%$search%")
+                    ->orWhere('tanggal', 'LIKE', "%$search%");
             });
         }
 

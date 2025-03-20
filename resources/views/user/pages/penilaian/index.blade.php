@@ -55,7 +55,7 @@
                                                 <td> {{ $item->bed ?? '' }} </td>
                                                 <td> {{ $item->nama ?? '' }} </td>
                                                 <td>{{ $item->resiko_jatuh ?? '' }}</td>
-                                                <td>tgl disini</td>
+                                                <td>{{$item->tanggal ?? ''}}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
