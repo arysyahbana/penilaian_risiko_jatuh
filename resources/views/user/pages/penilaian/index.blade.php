@@ -54,7 +54,7 @@
                                                 <td> {{ $item->ruangan ?? '' }} </td>
                                                 <td> {{ $item->bed ?? '' }} </td>
                                                 <td> {{ $item->nama ?? '' }} </td>
-                                                <td>{{ $item->resiko_jatuh ?? '' }}</td>
+                                                <td>{{ $item->risiko_jatuh ?? '' }}</td>
                                                 <td>{{$item->tanggal ?? ''}}</td>
                                             </tr>
                                         @endforeach
