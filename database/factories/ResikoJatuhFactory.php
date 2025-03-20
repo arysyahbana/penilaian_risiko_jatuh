@@ -17,6 +17,7 @@ class ResikoJatuhFactory extends Factory
             'bed' => $this->faker->bothify('B#'), // Contoh: B1, B2
             'nama' => $this->faker->name(),
             'risiko_jatuh' => $this->faker->randomElement(['Rendah', 'Sedang', 'Tinggi']),
+            'tanggal' => $this->faker->date(),
         ];
     }
 }

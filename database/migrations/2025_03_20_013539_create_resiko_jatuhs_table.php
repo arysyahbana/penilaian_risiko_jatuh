@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('bed');
             $table->string('nama');
             $table->string('risiko_jatuh');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }

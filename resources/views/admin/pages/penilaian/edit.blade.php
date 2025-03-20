@@ -28,7 +28,7 @@
                                     @endforeach
                                 </select>
 
-                                <x-admin.input type="date" placeholder="Tanggal" label="Tanggal" name="tanggal" />
+                                <x-admin.input type="date" placeholder="Tanggal" label="Tanggal" name="tanggal" value="{{ $data->tanggal ?? '' }}"/>
 
                             </div>
                             <div class="card-footer d-flex justify-content-end">
