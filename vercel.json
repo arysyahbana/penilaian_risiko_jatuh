@@ -8,23 +8,23 @@
     "routes": [
         {
             "src": "/img/(.*)",
-            "dest": "/public/dist/assets/img/$1"
+            "dest": "/public/dist/assets/img/"
         },
         {
-            "src": "/dist/assets/css(.*)",
-            "dest": "/public/dist/assets/css/$1"
+            "src": "/dist/assets/css/(.*)",
+            "dest": "/public/dist/assets/css/"
         },
         {
-            "src": "/dist/assets/fonts(.*)",
-            "dest": "/public/dist/assets/fonts/$1"
+            "src": "/dist/assets/fonts/(.*)",
+            "dest": "/public/dist/assets/fonts/"
         },
         {
-            "src": "/dist/assets/js(.*)",
-            "dest": "/public/dist/assets/js/$1"
+            "src": "/dist/assets/js/(.*)",
+            "dest": "/public/dist/assets/js/"
         },
         {
-            "src": "/dist/assets/scss(.*)",
-            "dest": "/public/dist/assets/scss/$1"
+            "src": "/dist/assets/scss/(.*)",
+            "dest": "/public/dist/assets/scss/"
         },
         {
             "src": "/build/assets/(.*)",
