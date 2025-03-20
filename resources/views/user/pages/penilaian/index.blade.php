@@ -43,6 +43,7 @@
                                             <th>Bed</th>
                                             <th>Nama</th>
                                             <th>Risiko Jatuh</th>
+                                            <th>Tanggal Input</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -54,6 +55,7 @@
                                                 <td> {{ $item->bed ?? '' }} </td>
                                                 <td> {{ $item->nama ?? '' }} </td>
                                                 <td>{{ $item->resiko_jatuh ?? '' }}</td>
+                                                <td>tgl disini</td>
                                             </tr>
                                         @endforeach
                                     </tbody>

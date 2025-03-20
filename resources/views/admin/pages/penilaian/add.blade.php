@@ -28,6 +28,8 @@
                                     <option value="Tinggi">Tinggi</option>
                                 </select>
 
+                                <x-admin.input type="date" placeholder="Tanggal" label="Tanggal" name="tanggal" />
+
                             </div>
                             <div class="card-footer d-flex justify-content-end">
                                 <button type="submit" class="btn btn-sm btn-success">Simpan</button>

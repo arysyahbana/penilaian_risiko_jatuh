@@ -25,6 +25,7 @@
                                         <x-admin.th>Bed</x-admin.th>
                                         <x-admin.th>Nama</x-admin.th>
                                         <x-admin.th>Risiko Jatuh</x-admin.th>
+                                        <x-admin.th>Tanggal Input</x-admin.th>
                                         <x-admin.th>Action</x-admin.th>
                                     </tr>
                                 @endslot
@@ -36,6 +37,7 @@
                                         <x-admin.td> {{ $item->bed }} </x-admin.td>
                                         <x-admin.td> {{ $item->nama }} </x-admin.td>
                                         <x-admin.td> {{ $item->risiko_jatuh }} </x-admin.td>
+                                        <x-admin.td>ini buat tgl </x-admin.td>
                                         <x-admin.td>
                                             <a href="{{ route('penilaian.edit', $item->no_mr) }}" class="btn bg-gradient-info">
                                                 <i class="fa fa-pencil"></i>
