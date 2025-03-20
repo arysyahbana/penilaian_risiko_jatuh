@@ -8,7 +8,7 @@
             </button>
 
             <div id="dropdownMenu" class="absolute right-0 mt-9 w-48 bg-white rounded-lg shadow-lg hidden">
-                <a href="{{ route('setting.show') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 transition duration-150 rounded-lg">
+                <a href="{{ route('penilaian.show') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 transition duration-150 rounded-lg">
                     <i class="fas fa-tachometer-alt"></i> Input Data
                 </a>
                 {{-- <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-200 transition duration-150 rounded-lg">
