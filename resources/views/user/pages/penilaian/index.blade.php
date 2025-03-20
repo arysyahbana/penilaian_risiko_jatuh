@@ -19,7 +19,7 @@
                     <div class="px-4 sm:px-12 pt-5 pb-12">
                         {{-- search --}}
                         <div class="flex justify-end w-full z-50">
-                            <form method="GET">
+                            <form method="GET" action="{{ route('penilaian.search') }}">
                                 <div class="flex">
                                     <input type="text" name="search" placeholder="Cari Data"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5">

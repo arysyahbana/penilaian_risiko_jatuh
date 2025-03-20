@@ -31,6 +31,7 @@ use Illuminate\Support\Facades\Route;
 
 // Guest
 Route::get('/', [PenilaianController::class, 'index'])->name('index');
+Route::get('/penilaian/search', [PenilaianController::class, 'search'])->name('penilaian.search');
 
 // Admin
 Route::middleware('auth')->group(function () {
