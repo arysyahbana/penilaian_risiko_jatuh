@@ -7,7 +7,7 @@
     },
     "routes": [
         {
-            "src": "/img/(.*)",
+            "src": "/dist/assets/img/(.*)",
             "dest": "/public/dist/assets/img/$1"
         },
         {
