@@ -16,7 +16,7 @@
 
                                 <x-admin.input type="text" placeholder="Ruangan" label="Ruangan" name="ruangan" value="{{ $data->ruangan ?? '' }}"/>
 
-                                <x-admin.input type="number" placeholder="Bed" label="Bed" name="bed" value="{{ $data->bed ?? '' }}" />
+                                <x-admin.input type="text" placeholder="Bed" label="Bed" name="bed" value="{{ $data->bed ?? '' }}" />
 
                                 <x-admin.input type="text" placeholder="Nama" label="Nama" name="nama" value="{{ $data->nama ?? '' }}" />
 
