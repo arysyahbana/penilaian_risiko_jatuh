@@ -9,7 +9,7 @@ class PenilaianController extends Controller
 {
     public function index()
     {
-        $data = ResikoJatuh::paginate(10);
+        $data = ResikoJatuh::latest()->paginate(10);
         return view('user.pages.penilaian.index', compact('data'));
     }
 
@@ -33,5 +33,4 @@ class PenilaianController extends Controller
 
         return view('user.pages.penilaian.index', compact('data'));
     }
-
 }

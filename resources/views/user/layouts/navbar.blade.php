@@ -1,4 +1,12 @@
-<div class="fixed left-0 right-0 z-50 pt-12 px-12 flex justify-end">
+<div class="fixed left-0 right-0 z-50 pt-12 px-12 flex justify-between">
+    <div class="flex items-center gap-3 z-50">
+        <img src="{{ asset('img/mjamil.webp') }}" alt="" class="h-12">
+        <img src="{{ asset('img/kemenkes.jpg') }}" alt="" class="h-12">
+        <div class="text-white font-bold">
+            <p>Kelompok B Manajemen Keperawatan</p>
+            <p>Program Studi Profesi Ners Tahun 2025</p>
+        </div>
+    </div>
     @auth
         <div class="relative hidden sm:flex">
             <button id="dropdownButton" class="bg-sky-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-sky-600 transition duration-200 flex items-center gap-2">

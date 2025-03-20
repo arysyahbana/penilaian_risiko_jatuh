@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 
 class PenilaianController extends Controller
 {
-    private function validateData(Request $request){
+    private function validateData(Request $request)
+    {
         return $request->validate([
             'no_mr' => 'required',
             'ruangan' => 'required',
@@ -23,13 +24,13 @@ class PenilaianController extends Controller
             'bed.required' => 'Bed pasien wajib diisi.',
             'nama.required' => 'Nama pasien wajib diisi.',
             'risiko_jatuh.required' => 'Tingkat resiko jatuh pasien wajib diisi.',
-            'tanggal'=> 'Tanggal wajib diisi.',
+            'tanggal' => 'Tanggal wajib diisi.',
         ]);
     }
     public function index()
     {
         $page = "penilaian";
-        $data = ResikoJatuh::all();
+        $data = ResikoJatuh::latest()->get();
         return view('admin.pages.penilaian.index', compact('page', 'data'));
     }
 
@@ -39,12 +40,13 @@ class PenilaianController extends Controller
         return view('admin.pages.penilaian.add', compact('page'));
     }
 
-    public function store(Request $request){
-        try{
+    public function store(Request $request)
+    {
+        try {
             $data = $this->validateData($request);
             ResikoJatuh::create($data);
             return redirect()->route('penilaian.show')->with('success', 'Data penilaian berhasil ditambahkan.');
-        }catch(Exception $e){
+        } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
     }
@@ -53,21 +55,23 @@ class PenilaianController extends Controller
     {
         $page = "penilaian";
         $data = ResikoJatuh::where('no_mr', $no_mr)->first();
-        return view('admin.pages.penilaian.edit', compact('page','data'));
+        return view('admin.pages.penilaian.edit', compact('page', 'data'));
     }
 
-    public function update($no_mr,Request $request){
-        try{
+    public function update($no_mr, Request $request)
+    {
+        try {
             $data = $this->validateData($request);
-            ResikoJatuh::updateOrCreate(['no_mr' => $no_mr],$data);
+            ResikoJatuh::updateOrCreate(['no_mr' => $no_mr], $data);
             return redirect()->route('penilaian.show')->with('success', 'Data penilaian berhasil diupdate.');
-        }catch(Exception $e){
+        } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
     }
 
-    public function destroy($no_mr){
+    public function destroy($no_mr)
+    {
         ResikoJatuh::where('no_mr', $no_mr)->delete();
-        return back()->with('success','Data penilaian berhasil dihapus.');
+        return back()->with('success', 'Data penilaian berhasil dihapus.');
     }
 }

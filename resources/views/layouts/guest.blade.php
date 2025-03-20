@@ -21,17 +21,26 @@
 
 <body class="font-sans text-gray-900 antialiased">
     <div
-        class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gradient-to-r from-sky-600 to-sky-300">
-        <div>
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-
-                {{-- <h1 class="text-3xl font-bold text-sky-500">Welcome Back</h1> --}}
-            </a>
+        class="min-h-screen pt-6 sm:pt-0 bg-gradient-to-r from-sky-600 to-sky-300">
+        <div class="flex items-start justify-start gap-3 pt-12 px-12">
+            <img src="{{ asset('img/kemenkes.jpg') }}" alt="" class="h-12">
+            <div class="text-white font-bold">
+                <p>Kelompok B Manajemen Keperawatan</p>
+                <p>Program Studi Profesi Ners Tahun 2025</p>
+            </div>
         </div>
+        <div class=" flex flex-col sm:justify-center items-center">
+            <div>
+                <a href="/">
+                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
 
-        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-            {{ $slot }}
+                    {{-- <h1 class="text-3xl font-bold text-sky-500">Welcome Back</h1> --}}
+                </a>
+            </div>
+
+            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+                {{ $slot }}
+            </div>
         </div>
     </div>
 </body>
