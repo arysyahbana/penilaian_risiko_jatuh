@@ -38,9 +38,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/show', [AdminPenilaianController::class, 'index'])->name('penilaian.show');
         Route::get('/create', [AdminPenilaianController::class, 'create'])->name('penilaian.create');
         Route::post('/store', [AdminPenilaianController::class, 'store'])->name('penilaian.store');
-        Route::get('/edit', [AdminPenilaianController::class, 'edit'])->name('penilaian.edit');
-        Route::post('/update/{id}', [AdminPenilaianController::class, 'update'])->name('penilaian.update');
-        Route::get('/destroy/{id}', [AdminPenilaianController::class, 'destroy'])->name('penilaian.destroy');
+        Route::get('/edit/{no_mr}', [AdminPenilaianController::class, 'edit'])->name('penilaian.edit');
+        Route::post('/update/{no_mr}', [AdminPenilaianController::class, 'update'])->name('penilaian.update');
+        Route::get('/destroy/{no_mr}', [AdminPenilaianController::class, 'destroy'])->name('penilaian.destroy');
     });
 });
 

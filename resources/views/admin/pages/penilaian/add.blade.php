@@ -9,7 +9,7 @@
                 <h6>Tambah Penilaian Risiko Jatuh</h6>
                 <div class="card mb-4">
                     <div class="card-body px-5 pt-4 pb-2">
-                        <form action="#" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('penilaian.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <x-admin.input type="text" placeholder="No MR" label="No MR" name="no_mr"/>

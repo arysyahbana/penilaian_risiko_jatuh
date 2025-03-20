@@ -18,31 +18,33 @@
                         <div class="table-responsive p-0">
                             <x-admin.table id="datatable">
                                 @slot('header')
-                                <tr>
-                                    <x-admin.th>No</x-admin.th>
-                                    <x-admin.th>No MR</x-admin.th>
-                                    <x-admin.th>Ruangan</x-admin.th>
-                                    <x-admin.th>Bed</x-admin.th>
-                                    <x-admin.th>Nama</x-admin.th>
-                                    <x-admin.th>Risiko Jatuh</x-admin.th>
-                                    <x-admin.th>Action</x-admin.th>
-                                </tr>
-                                @endslot
                                     <tr>
-                                        <x-admin.td>1</x-admin.td>
-                                        <x-admin.td>12345 </x-admin.td>
-                                        <x-admin.td>2</x-admin.td>
-                                        <x-admin.td>1</x-admin.td>
-                                        <x-admin.td>Sularni</x-admin.td>
-                                        <x-admin.td>Tinggi</x-admin.td>
+                                        <x-admin.th>No</x-admin.th>
+                                        <x-admin.th>No MR</x-admin.th>
+                                        <x-admin.th>Ruangan</x-admin.th>
+                                        <x-admin.th>Bed</x-admin.th>
+                                        <x-admin.th>Nama</x-admin.th>
+                                        <x-admin.th>Risiko Jatuh</x-admin.th>
+                                        <x-admin.th>Action</x-admin.th>
+                                    </tr>
+                                @endslot
+                                @foreach ($data as $item)
+                                    <tr>
+                                        <x-admin.td>{{ $loop->iteration }}</x-admin.td>
+                                        <x-admin.td>{{ $item->no_mr }} </x-admin.td>
+                                        <x-admin.td>{{$item->ruangan}}</x-admin.td>
+                                        <x-admin.td> {{ $item->bed }} </x-admin.td>
+                                        <x-admin.td> {{ $item->nama }} </x-admin.td>
+                                        <x-admin.td> {{ $item->risiko_jatuh }} </x-admin.td>
                                         <x-admin.td>
-                                            <a href="{{ route('penilaian.edit') }}" class="btn bg-gradient-info">
+                                            <a href="{{ route('penilaian.edit', $item->no_mr) }}" class="btn bg-gradient-info">
                                                 <i class="fa fa-pencil"></i>
                                                 <span class="text-capitalize ms-1">Edit</span>
                                             </a>
                                             <a href="#" class="btn bg-gradient-danger" data-bs-toggle="modal"
                                                 data-bs-target="#hapusMateri"><i class="fa fa-trash"
-                                                    aria-hidden="true"></i><span class="text-capitalize ms-1">Hapus</span></a>
+                                                    aria-hidden="true"></i><span
+                                                    class="text-capitalize ms-1">Hapus</span></a>
                                         </x-admin.td>
 
                                         <!-- Modal Hapus -->
@@ -52,7 +54,8 @@
                                             <div class="modal-dialog modal-dialog-scrollable">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="hapusMateriLabel">Hapus Data Penilaian Risiko Jatuh
+                                                        <h1 class="modal-title fs-5" id="hapusMateriLabel">Hapus Data
+                                                            Penilaian Risiko Jatuh
                                                         </h1>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
@@ -63,7 +66,8 @@
                                                         <p>Yakin ingin menghapus data?</p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <a href="#" type="submit" class="btn btn-sm btn-danger">Hapus</a>
+                                                        <a href="{{ route('penilaian.destroy', $item->no_mr) }}" type="submit"
+                                                            class="btn btn-sm btn-danger">Hapus</a>
                                                         <button type="button" class="btn btn-sm btn-secondary"
                                                             data-bs-dismiss="modal">Batal</button>
                                                     </div>
@@ -71,7 +75,7 @@
                                             </div>
                                         </div>
                                     </tr>
-
+                                @endforeach
                             </x-admin.table>
                         </div>
                     </div>
