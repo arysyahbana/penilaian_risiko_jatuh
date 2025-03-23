@@ -51,6 +51,8 @@
                     <span>EFITRA, SKP. M.KEP</span>
                     <span>|</span>
                     <span>NS. INDRI RAHMADINI. M.KEP</span>
+                    <span>|</span>
+                    <span>NS. LIDYA. M.KEP, SP. KMB</span>
                 </div>
 
                 <div class="flex items-center gap-2 text-white font-bold text-sm">
